@@ -1,0 +1,15 @@
+
+	- rails new -d postgresql test_stripe
+	>> ajout au gemfil
+	>> creation et modif .env
+	>> modif .gitignore
+	- bundle install
+	- rails db:create
+	- rails g controller charges
+	>> modif dans le controller charge
+	>> modif dans config/routes.rb
+	>> Création et modif config/initializers/stripe.rb
+	>> Création et modif app/views/layouts/charges.html.erb
+	>> Création et modif app/views/charges/new.html.erb
+	>> Création et modif app/views/charges/create.html.erb
+	>> modif dans config/routes.rb

@@ -1,0 +1,21 @@
+
+	- rails generate model Cart_item amount:integer
+	>> modif dans db/migrate/20190305233523_create_carts_items.rb
+		t.belongs_to :cart, index: true
+      	t.belongs_to :item, index: true
+    - rails db:migrate 
+    >> modif dans app/models/cart_item.rb
+    	belongs_to :cart
+  		belongs_to :item
+    >> modif dans app/models/cart.rb
+    	has_many :carts
+    >> modif dans app/models/item.rb
+    	has_many :cart_items
+    - rails db:migrate 
+    - rails generate migration remove
+    >> modif dans /db/migrate/20190306002721_remove.rb
+    	remove_column :carts, :item_id, :bigint
+    - rails db:migrate
+
+
+    

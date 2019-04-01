@@ -1,0 +1,15 @@
+
+- rails new test-ajax-rails -D=postgresql -T
+- cd test-ajax-rails/
+>> modif manuel dans le gemfile remplace "gem 'sqlite3'" par  "gem 'sqlite3', '~> 1.3.6'"
+- bundle install
+- rails g model Book title:string author:string length:integer
+- rails g controller books index
+>> modif manuele dans route.rb
+>> modif manuel dans le gemmfile ajout "gem 'faker'"
+- bundle install
+>> création du seed.
+- rails db:create
+- rails db:migrate
+- rails db:seed
+- 

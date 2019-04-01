@@ -1,0 +1,9 @@
+
+- rails new -d postgresql test_scafold
+>> ajout au gemfil
+- bundle install
+- rails db:create
+- rails generate scaffold User first_name:string last_name:string email:string description:text encrypted_password:string
+- rails db:migrate
+>> ajout au gemfil
+- rails db:seed

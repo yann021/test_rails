@@ -1,0 +1,13 @@
+
+	<div class="card">
+			<%if item.cat_picture.attached?%>
+			<%= image_tag item.cat_picture, alt: "#{item.title}", class: "card-img" %>
+			<%else%>
+			<img src="" class="card-img" alt="img-cat">
+			<% end %>
+		<div class="card-body">
+			<%= link_to item.title, item_path(item.id), class: "card-title" %>
+		</div>
+	</div>
+
+
